@@ -1,0 +1,59 @@
+{
+ "cliente": "Persianas Grajaú",
+ "slug": "persianas_grajau",
+ "objetivo": "Conversas no WhatsApp",
+ "regiao": "Rio de Janeiro e Grande Rio",
+ "plataformas_txt": "do Google Ads, Meta Ads e TikTok Ads",
+ "logo_cabecalho": "assets/logo-persianas-grajau-branca.png",
+ "logo_rodape": "assets/logo-marcelo-oliveira.svg",
+ "whatsapp_marcelo": "5521990800215",
+ "cores": {
+  "destaque": "#F2C01E",
+  "dourado": "#C99700",
+  "series": [
+   "#3B3B38",
+   "#C99700"
+  ],
+  "plataformas": {
+   "Google Ads": "#3B3B38",
+   "Meta Ads": "#C99700",
+   "TikTok Ads": "#A8A39A"
+  }
+ },
+ "canais": {
+  "Google Ads": "YouTube, Pesquisa",
+  "Meta Ads": "Facebook, Instagram",
+  "TikTok Ads": "TikTok"
+ },
+ "contas": {
+  "google": {
+   "conta": "Persianas Grajaú",
+   "cid": "292-158-2245",
+   "ocid": "1038144384",
+   "filtro_conversao": "Leads de mensagens"
+  },
+  "meta": {
+   "act": "1881001745623970",
+   "business_id": "1248750448590878"
+  },
+  "tiktok": {
+   "aadvid": "7580443219122143249"
+  }
+ },
+ "grupos": {
+  "Google Ads": [
+   "Google Ads"
+  ],
+  "Meta Ads": [
+   "Meta Ads"
+  ],
+  "TikTok Ads": [
+   "TikTok Ads"
+  ]
+ },
+ "como_ler": [
+  "Lead é a conversão de mensagem de cada plataforma: leads de mensagens no Google, conversas iniciadas no Meta e conversões do pixel no TikTok. As definições não são idênticas.",
+  "No Google, as conversões são da conta inteira e não estão separadas entre Pesquisa e YouTube; o custo por lead do Google é a média das duas campanhas.",
+  "TikTok sem conversão no painel não prova que não houve contatos; é preciso confirmar o rastreio do WhatsApp."
+ ]
+}

@@ -31,7 +31,7 @@ html,body{overflow-x:hidden}
 .pg header .muted{color:#D6D2C9}
 .pg header .take{margin-top:1rem;padding-left:.9rem;border-left:3px solid var(--y);font-size:1.05rem;max-width:58ch;color:#fff}
 .pg .logo{display:block;height:4rem;width:auto;margin-bottom:1rem}
-.pg .chip{display:inline-flex;align-items:center;gap:.45rem;font-size:var(--cds-font-size-caption);background:rgba(242,192,30,.16);color:#F6D56B;border:1px solid rgba(242,192,30,.4);padding:.15rem .75rem;border-radius:999px;margin-bottom:.7rem}
+.pg .chip{display:inline-flex;align-items:center;gap:.45rem;font-size:var(--cds-font-size-caption);background:color-mix(in srgb,var(--y) 16%,transparent);color:color-mix(in srgb,var(--y) 60%,#fff);border:1px solid color-mix(in srgb,var(--y) 40%,transparent);padding:.15rem .75rem;border-radius:999px;margin-bottom:.7rem}
 .pg .chip i{width:.45rem;height:.45rem;border-radius:50%;background:var(--y)}
 .pg h2{font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);margin:2rem 0 .15rem;display:flex;align-items:center;gap:.6rem}
 .pg h2::before{content:'';width:.35rem;height:1.15rem;border-radius:3px;background:var(--y)}
@@ -154,9 +154,9 @@ html,body{overflow-x:hidden}
 </dl>
 
 <div class='grid'>
-<div class='card kpi'><span class='ico'><svg viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M12 7v10M9.5 9.5h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4'/></svg></span><div class='bd'><span class='sub'>Investimento total<button class='pginfo' type='button' data-tip='Soma do dinheiro gasto nos anúncios do Google, Meta e TikTok neste mês.' aria-label='Soma do dinheiro gasto nos anúncios do Google, Meta e TikTok neste mês.'>i</button></span><b data-draw='kpi' data-source='totais' data-field='investimento' data-row='0' data-fmt='brl'>—</b><div class='breakdown' data-draw='invlist' data-source='plataformas'></div></div></div>
+<div class='card kpi'><span class='ico'><svg viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M12 7v10M9.5 9.5h4a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 0 0 3h4'/></svg></span><div class='bd'><span class='sub'>Investimento total<button class='pginfo' type='button' data-tip='Soma do dinheiro gasto nos anúncios de todas as plataformas neste mês.' aria-label='Soma do dinheiro gasto nos anúncios de todas as plataformas neste mês.'>i</button></span><b data-draw='kpi' data-source='totais' data-field='investimento' data-row='0' data-fmt='brl'>—</b><div class='breakdown' data-draw='invlist' data-source='plataformas'></div></div></div>
 <div class='card kpi'><span class='ico'><svg viewBox='0 0 24 24'><path d='M4 5h16v11H9l-5 4z'/></svg></span><div class='bd'><span class='sub'>Leads gerados<button class='pginfo' type='button' data-tip='Lead é uma pessoa interessada que entrou em contato pelo WhatsApp depois de ver o anúncio: um possível cliente pedindo informações ou orçamento.' aria-label='Lead é uma pessoa interessada que entrou em contato pelo WhatsApp depois de ver o anúncio: um possível cliente pedindo informações ou orçamento.'>i</button></span><b data-draw='kpi' data-source='totais' data-field='leads' data-row='0' data-fmt='int'>—</b><span class='sub2'>conversas no WhatsApp</span></div></div>
-<div class='card kpi'><span class='ico'><svg viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><circle cx='12' cy='12' r='5'/><circle cx='12' cy='12' r='1.2'/></svg></span><div class='bd'><span class='sub'>Custo médio por lead<button class='pginfo' type='button' data-tip='Quanto foi investido, em média, para cada pessoa que chamou no WhatsApp, somando as três plataformas. Quanto menor, mais barato saiu cada contato.' aria-label='Quanto foi investido, em média, para cada pessoa que chamou no WhatsApp, somando as três plataformas. Quanto menor, mais barato saiu cada contato.'>i</button></span><b data-draw='kpi' data-source='totais' data-field='cpl' data-row='0' data-fmt='brl'>—</b><span class='sub2'>todas as plataformas</span></div></div>
+<div class='card kpi'><span class='ico'><svg viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><circle cx='12' cy='12' r='5'/><circle cx='12' cy='12' r='1.2'/></svg></span><div class='bd'><span class='sub'>Custo médio por lead<button class='pginfo' type='button' data-tip='Quanto foi investido, em média, para cada pessoa que chamou no WhatsApp, somando todas as plataformas. Quanto menor, mais barato saiu cada contato.' aria-label='Quanto foi investido, em média, para cada pessoa que chamou no WhatsApp, somando todas as plataformas. Quanto menor, mais barato saiu cada contato.'>i</button></span><b data-draw='kpi' data-source='totais' data-field='cpl' data-row='0' data-fmt='brl'>—</b><span class='sub2'>todas as plataformas</span></div></div>
 <div class='card kpi'><span class='ico'><svg viewBox='0 0 24 24'><path d='M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M9 20h6'/></svg></span><div class='bd'><span class='sub'>Menor custo por lead<button class='pginfo pr' type='button' data-tip='A plataforma em que cada contato saiu mais barato.' aria-label='A plataforma em que cada contato saiu mais barato.'>i</button></span><b data-draw='kpi' data-source='totais' data-field='melhor_cpl' data-row='0' data-fmt='brl'>—</b><span class='sub2' data-draw='kpi' data-source='totais' data-field='melhor_nome' data-row='0' data-fmt='text'>—</span></div></div>
 </div>
 
@@ -215,7 +215,7 @@ html,body{overflow-x:hidden}
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
 <script>
-const CSV={"campanhas": "grupo,plataforma,campanha,investimento,impressoes,interacoes,leads\nGoogle Ads,Google Ads,Pesquisa,107.26,1591,187,\nGoogle Ads,Google Ads,YT - Geração de demanda,1329.03,66180,30673,\nMeta Ads,Meta Ads,LOJA_08/26 Tráfego WhatsApp,428.84,14487,106,52\nTikTok Ads,TikTok Ads,LOJA_SETEMBRO_26 Lead WhatsApp,279.96,116606,1715,0\n", "google_leads": "plataforma,leads\nGoogle Ads,21\n", "pedido": "plataforma,pedido\nGoogle Ads,1500\nMeta Ads,500\nTikTok Ads,500\n", "periodo": "dias_total,dias_passados\n31,30\n", "acoes": "titulo,tipo,texto\nLimitar o YouTube a um teto diário,Ação nossa,\"A campanha de YouTube foi combinada em R$ 1.000 no mês, mas está configurada com um orçamento total para vários meses e gastou acima disso. Vamos trocar por um limite diário que respeite o combinado.\"\nAmpliar a Pesquisa,Ação nossa,\"A Pesquisa usou só uma parte dos R$ 500 combinados por falta de volume, não de verba. Vamos revisar palavras-chave, correspondências e lances para captar mais quem já procura cortinas e persianas.\"\nPriorizar o Meta,Decisão sua,\"O Meta tem o menor custo por lead medido. Você pode direcionar mais verba para ele, mantendo o Google com foco na Pesquisa.\"\nAtivar o rastreio no TikTok,Ação nossa,\"O TikTok trouxe cliques, mas nenhuma conversão aparece no painel. Vamos configurar o rastreio do WhatsApp e passar o orçamento para um valor mensal antes de decidir se a plataforma merece mais verba.\"\nPreparar o atendimento no WhatsApp,Ação sua,\"Responder no mesmo dia e deixar uma mensagem automática de boas-vindas evita perder o contato que o anúncio trouxe. Mais verba só compensa se as conversas viram orçamentos.\"\n", "sugestao": "grupo,percentual,papel\nMeta Ads,0.50,\"Motor de geração de conversas: hoje é a plataforma com menor custo por lead medido.\"\nGoogle Ads,0.40,\"Pesquisa para captar quem já procura cortinas e persianas, e YouTube para reconhecimento de marca. Dentro do Google, a prioridade é fortalecer a Pesquisa.\"\nTikTok Ads,0.10,\"Teste controlado até o rastreio de conversão do WhatsApp estar funcionando.\"\n"};
+const CSV={"campanhas": "grupo,plataforma,campanha,investimento,impressoes,interacoes,leads\nGoogle Ads,Google Ads,Pesquisa,107.26,1591,187,\nGoogle Ads,Google Ads,YT - Geração de demanda,1329.03,66180,30673,\nMeta Ads,Meta Ads,LOJA_08/26 Tráfego WhatsApp,428.84,14487,106,52\nTikTok Ads,TikTok Ads,LOJA_SETEMBRO_26 Lead WhatsApp,279.96,116606,1715,0\n", "leads_conta": "plataforma,leads\nGoogle Ads,21\n", "pedido": "plataforma,pedido\nGoogle Ads,1500\nMeta Ads,500\nTikTok Ads,500\n", "periodo": "dias_total,dias_passados\n31,30\n", "acoes": "titulo,tipo,texto\nLimitar o YouTube a um teto diário,Ação nossa,\"A campanha de YouTube foi combinada em R$ 1.000 no mês, mas está configurada com um orçamento total para vários meses e gastou acima disso. Vamos trocar por um limite diário que respeite o combinado.\"\nAmpliar a Pesquisa,Ação nossa,\"A Pesquisa usou só uma parte dos R$ 500 combinados por falta de volume, não de verba. Vamos revisar palavras-chave, correspondências e lances para captar mais quem já procura cortinas e persianas.\"\nPriorizar o Meta,Decisão sua,\"O Meta tem o menor custo por lead medido. Você pode direcionar mais verba para ele, mantendo o Google com foco na Pesquisa.\"\nAtivar o rastreio no TikTok,Ação nossa,\"O TikTok trouxe cliques, mas nenhuma conversão aparece no painel. Vamos configurar o rastreio do WhatsApp e passar o orçamento para um valor mensal antes de decidir se a plataforma merece mais verba.\"\nPreparar o atendimento no WhatsApp,Ação sua,\"Responder no mesmo dia e deixar uma mensagem automática de boas-vindas evita perder o contato que o anúncio trouxe. Mais verba só compensa se as conversas viram orçamentos.\"\n", "sugestao": "grupo,percentual,papel\nMeta Ads,0.50,\"Motor de geração de conversas: hoje é a plataforma com menor custo por lead medido.\"\nGoogle Ads,0.40,\"Pesquisa para captar quem já procura cortinas e persianas, e YouTube para reconhecimento de marca. Dentro do Google, a prioridade é fortalecer a Pesquisa.\"\nTikTok Ads,0.10,\"Teste controlado até o rastreio de conversão do WhatsApp estar funcionando.\"\n"};
 function parseCSV(t){const rows=[];let row=[],cur='',q=false;
  for(let i=0;i<t.length;i++){const c=t[i];
   if(q){if(c==='"'){if(t[i+1]==='"'){cur+='"';i++;}else{q=false;}}else{cur+=c;}}
@@ -237,15 +237,16 @@ window.dash={
 window.__run=()=>{draws.forEach((d)=>{document.querySelectorAll('[data-draw="'+d[0]+'"]').forEach((el)=>{try{if(typeof d[1]==='function'){d[1](el);}else if(!el.__mounted){el.__mounted=true;el.__made=d[1].mount(el);}else if(d[1].update){d[1].update(el,el.__made);}}catch(e){console.error(d[0],e);}});});};
 </script>
 <script>
-const SER=['#3B3B38','#C99700'];
-const PC={'Google Ads':'#3B3B38','Meta Ads':'#C99700','TikTok Ads':'#A8A39A'};
-const CANAIS={'Google Ads':'YouTube, Pesquisa','Meta Ads':'Facebook, Instagram','TikTok Ads':'TikTok'};
+const CFG={"cores": {"series": ["#3B3B38", "#C99700"], "plataformas": {"Google Ads": "#3B3B38", "Meta Ads": "#C99700", "TikTok Ads": "#A8A39A"}}, "canais": {"Google Ads": "YouTube, Pesquisa", "Meta Ads": "Facebook, Instagram", "TikTok Ads": "TikTok"}};
+const SER=CFG.cores.series;
+const PC=CFG.cores.plataformas;
+const CANAIS=CFG.canais;
 const MO=window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
 const played=new WeakSet();
 const T={
  cpl:'Quanto foi investido, em média, para cada pessoa que chamou no WhatsApp. Quanto menor, mais barato saiu cada contato.',
  imp:'Quantas vezes o anúncio apareceu na tela de alguém. Não é o mesmo que cliques ou contatos.',
- tk:'O painel do TikTok não registrou contatos pelo WhatsApp. Isso pode ser falha de configuração do rastreio, e não falta de interessados.'
+ tk:'O painel desta plataforma não registrou contatos pelo WhatsApp. Isso pode ser falha de configuração do rastreio, e não falta de interessados.'
 };
 function info(text){
  const b=document.createElement('button');
@@ -275,12 +276,12 @@ function whenIn(el,fn){
  const iv=setInterval(()=>{if(!el.isConnected){clearInterval(iv);return;}if(h.classList.contains('in')){clearInterval(iv);fn();}},120);
 }
 
-dash.calc('plataformas',{inputs:['campanhas','google_leads'],fn:(campanhas,google_leads)=>{
+dash.calc('plataformas',{inputs:['campanhas','leads_conta'],fn:(campanhas,leads_conta)=>{
  const by={};
  campanhas.forEach((r)=>{const o=by[r.plataforma]||(by[r.plataforma]={plataforma:r.plataforma,investimento:0,impressoes:0,interacoes:0,leads:null});
   o.investimento+=Number(r.investimento);o.impressoes+=Number(r.impressoes);o.interacoes+=Number(r.interacoes);
   if(r.leads!==''&&r.leads!=null){o.leads=(o.leads||0)+Number(r.leads);}});
- google_leads.forEach((g)=>{if(by[g.plataforma]){by[g.plataforma].leads=Number(g.leads);}});
+ leads_conta.forEach((g)=>{if(by[g.plataforma]){by[g.plataforma].leads=Number(g.leads);}});
  return Object.values(by).map((o)=>({plataforma:o.plataforma,investimento:o.investimento,impressoes:o.impressoes,interacoes:o.interacoes,leads:o.leads,cpl:o.leads>0?o.investimento/o.leads:null}));
 }});
 
