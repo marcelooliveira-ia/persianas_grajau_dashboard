@@ -568,7 +568,8 @@ dash.draw('pop',{
   const hide=()=>{el.classList.remove('on');cur=null;};
   const show=(b)=>{
    const tip=b.getAttribute('data-tip');if(!tip||!pg){return;}
-   cur=b;at=Date.now();
+   if(cur!==b||!el.classList.contains('on')){at=Date.now();}
+   cur=b;
    el.textContent=tip;
    const pr=pg.getBoundingClientRect(),br=b.getBoundingClientRect();
    const vw=document.documentElement.clientWidth,vh=window.innerHeight;
@@ -586,7 +587,9 @@ dash.draw('pop',{
   };
   const hit=(e)=>(e.target&&e.target.closest)?e.target.closest('.pginfo'):null;
   const onOver=(e)=>{const b=hit(e);if(b){show(b);}};
-  const onOut=(e)=>{const b=hit(e);if(b&&cur===b){hide();}};
+  let tt=0;
+  const onTouch=()=>{tt=Date.now();};
+  const onOut=(e)=>{if(Date.now()-tt<1200){return;}const b=hit(e);if(b&&cur===b){hide();}};
   const onClick=(e)=>{const b=hit(e);if(b){if(cur===b&&el.classList.contains('on')&&Date.now()-at>500){hide();}else{show(b);}}else{hide();}};
   const onKey=(e)=>{if(e.key==='Escape'){hide();}};
   document.addEventListener('mouseover',onOver);
@@ -595,6 +598,7 @@ dash.draw('pop',{
   document.addEventListener('focusout',onOut);
   document.addEventListener('click',onClick);
   document.addEventListener('keydown',onKey);
+  document.addEventListener('touchstart',onTouch,{passive:true});
   window.addEventListener('scroll',hide,true);
   window.addEventListener('resize',hide);
   return {off:()=>{
@@ -604,6 +608,7 @@ dash.draw('pop',{
    document.removeEventListener('focusout',onOut);
    document.removeEventListener('click',onClick);
    document.removeEventListener('keydown',onKey);
+   document.removeEventListener('touchstart',onTouch);
    window.removeEventListener('scroll',hide,true);
    window.removeEventListener('resize',hide);
   }};
